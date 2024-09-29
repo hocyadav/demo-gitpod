@@ -1,5 +1,6 @@
 package io.hari.demo_gitpod;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,4 +11,9 @@ public class DemoGitpodApplication {
 		SpringApplication.run(DemoGitpodApplication.class, args);
 	}
 
+	// use spring application runner class to run methods on startup
+	 @PostConstruct
+	 public void init() {
+	 	System.out.println("DemoGitpodApplication started");
+	 }
 }
